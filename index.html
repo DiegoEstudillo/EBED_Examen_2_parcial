@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analisis de Datos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Analisis de Datos</h1>
+  <p>Peso | Altura | Velocidad | Color</p>
+</header>
+
+<div id="zona-carga">
+  <p>Carga el archivo Excel con los datos</p>
+  <label class="btn-cargar">
+    Seleccionar datos.xlsx
+    <input type="file" id="inputArchivo" accept=".xlsx,.xls" style="display:none">
+  </label>
+  <span id="nombre-archivo"></span>
+</div>
+
+<div id="panel">
+  <div class="botones-grid">
+    <button class="btn-seccion" id="btn-frec-abs">Frecuencias Absolutas</button>
+    <button class="btn-seccion" id="btn-pastel">Diagrama de Pastel</button>
+    <button class="btn-seccion" id="btn-acumulada">Frec. Acumuladas</button>
+    <button class="btn-seccion" id="btn-poligono">Poligono de Frecuencias</button>
+    <button class="btn-seccion" id="btn-estadisticas">Media / Mediana / Moda</button>
+    <button class="btn-seccion" id="btn-datos">Datos Originales</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="btn-cerrar" id="btn-cerrar">&#x2715;</button>
+    <h2 id="modal-titulo"></h2>
+    <div id="modal-cuerpo"></div>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
